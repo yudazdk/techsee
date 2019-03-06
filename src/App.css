@@ -1,0 +1,98 @@
+#pageWrapper{
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Buttons */
+
+.button-style {
+    cursor: pointer;
+    width: 100px;
+    margin-left: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    border: green;
+}
+.button-style:hover{
+    background-color: green;
+    opacity: 0.9;
+}
+.button-style:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+/* Table */
+
+.first-row {
+    background-color: #BDBDBD;
+    color: white;
+    border: 1px solid black;
+}
+table {
+    margin-top: 15px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid;
+}
+
+/* Form */
+
+.input-style{
+    border-radius: 3px;
+    padding: 4px 8px;
+}
+label{
+    font-weight: bold;
+    margin-right: 10px;
+}
+.error-text {
+    color: red;
+    font-weight: bold;
+}
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}

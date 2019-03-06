@@ -1,0 +1,83 @@
+import React, { Component } from 'react';
+import axios from 'axios';
+
+import './App.css';
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            testers: [],
+
+            searchText: '',
+
+            errorText: 'Error'
+        };
+    }
+
+    searchTextChange = event => this.setState({searchText: event.target.value});
+
+    searchTesters(event) {
+        event.preventDefault();
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <h1>Search Bugs</h1>
+
+                <label>Tester Name:</label>
+                <input type="text" value={this.state.searchText} onChange={this.searchTextChange}/>
+
+                <button className="btn-send" onClick={this.searchTesters.bind(this)}>Fetch</button>
+
+
+                <div className="error-text">{this.state.errorText}</div>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Country</th>
+                        <th>Bugs</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>Melisa</td>
+                        <td>Kadosh</td>
+                        <td>Israel</td>
+                        <td>Bugs</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lynda</td>
+                        <td>Golumb</td>
+                        <td>New Zealand</td>
+                        <td>Bugs</td>
+                    </tr>
+
+                    <tr>
+                        <td>Artem</td>
+                        <td>Puzailov</td>
+                        <td>Ukraine</td>
+                        <td>Bugs</td>
+                    </tr>
+
+                    <tr>
+                        <td>Rob</td>
+                        <td>Rabbi</td>
+                        <td>UK</td>
+                        <td>Bugs</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        );
+    }
+}
+
+export default App;
