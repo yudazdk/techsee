@@ -211,7 +211,7 @@ class App extends Component {
 
                 <label>Tester Name:</label>
                 <input type="text" className="input-style" style={this.getSearchInputStyle()} maxLength="12"
-                       value={this.state.searchText} onChange={this.searchTextChange}/>
+                       placeholder="“Enter the tester name”" value={this.state.searchText} onChange={this.searchTextChange}/>
 
                 <button  type="submit" className="button-style" onClick={this.searchTesters.bind(this)} disabled={!this.validateSearchText()}>Fetch</button>
 

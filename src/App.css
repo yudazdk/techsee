@@ -79,6 +79,10 @@ td {
     border: 1px solid;
 }
 
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
 /* Form */
 
 .input-style{
@@ -92,7 +96,4 @@ label{
 .error-text {
     color: red;
     font-weight: bold;
-}
-.table-striped>tbody>tr:nth-of-type(even) {
-    background-color: #f9f9f9;
 }
