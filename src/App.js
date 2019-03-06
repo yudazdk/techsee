@@ -188,6 +188,20 @@ class App extends Component {
         }
     }
 
+    /**
+     * This function set the input
+     * color to red if it's not valid.
+     *
+     * @returns {*}
+     */
+    getSearchInputStyle() {
+        if ( this.validateSearchText() ) {
+            return {};
+        } else {
+            return {color: 'red'};
+        }
+    }
+
     render() {
         let thStyle = this.getThStyle();
 
@@ -196,7 +210,8 @@ class App extends Component {
                 <h1>Search Bugs</h1>
 
                 <label>Tester Name:</label>
-                <input type="text" className="input-style" maxLength="12" value={this.state.searchText} onChange={this.searchTextChange}/>
+                <input type="text" className="input-style" style={this.getSearchInputStyle()} maxLength="12"
+                       value={this.state.searchText} onChange={this.searchTextChange}/>
 
                 <button  type="submit" className="button-style" onClick={this.searchTesters.bind(this)} disabled={!this.validateSearchText()}>Fetch</button>
 
